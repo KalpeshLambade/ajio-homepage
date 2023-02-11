@@ -1,10 +1,10 @@
 *{
-    margin-left: 0;
+    margin: 0;
     padding:0;
 }
 #top-section{
     height:100px;
-    width: 90%;
+    width: 95%;
     margin: auto;
     /* border:1px solid red; */
 }
@@ -26,8 +26,7 @@
     width: 100%;
     height: 60%;
     /* border:1px solid red; */
-    margin-left:30% ;
-    margin-top: 3%;
+    margin-top: 5%;
 }
 #nav-right{
     /* border:1px solid tomato; */
@@ -168,9 +167,19 @@
     width:100%;
     height: 500px;
 }
-#discount,#brand-game,#bank,#in-trend{
+#discount,#brand-game,#in-trend{
     width:100%;
     height: 150px;
+}
+
+#bank{
+    width:100%;
+    height: 150px;
+    border:1px solid red;
+}
+#bank img{
+    height: 100%;
+    width:100%;
 }
 #v-day{
     height: 500px;
