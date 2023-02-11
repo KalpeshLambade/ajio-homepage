@@ -210,3 +210,25 @@
     height: 100%;
     width:100%;
 }
+.idea{
+    width: 100%;
+}
+.idea >div{
+    width:100%;
+}
+.idea >div img{
+    height: 100%;
+    width: 100%;
+}
+.product{
+    display: flex;
+    width:100%;
+    height: 600px;
+}
+.product >div{
+    width:25%;
+}
+.product >div img{
+    height: 100%;
+    width: 100%;
+}
