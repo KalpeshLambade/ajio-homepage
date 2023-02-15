@@ -37,6 +37,73 @@
         height: 50%;
         width:5%;
     }
+    #countdown{
+        height: 20px;
+    }
+    #countdown >div{
+        font-size: 3vw;
+        width:50%;
+    }
+    .live-now{
+        height: 50px;
+    }
+    #pricing,#v-day{
+        height: 100px;
+    }
+    #discount,#brand-game,#in-trend,#bank{
+        height: 50px;
+        /* border: 1px solid red; */
+    }
+    #reward{
+        height: 50px;
+        /* border: 1px solid red; */
+    }
+    #invite,#trend-cards{
+        height:150px;
+    }
+    .product{
+        height:150px;
+    }
+    #logo{
+        height: 70px;
+    }
+    #logo >div i{
+        font-size: 4vw;
+    }
+    #logo >div p{
+        font-size: 3vw;
+    }
+    footer{
+        height: 200px;
+    }
+    #side{
+        display: none;
+    }
+    #main>div:nth-child(1){
+        width: 100%;
+    }
+    #topware-body{
+        width: 100%;
+        height: 500px;
+    }
+    #topware-body >div:nth-child(1){
+
+    }
+    #topware-bar >div{
+        font-size:3vw;
+    }
+    #topware-bar >div:nth-child(3) input{
+        height: 100%;
+    }
+    .card-images{
+        height: 200px;
+    }
+    .card-images>div >div:nth-child(1){
+        height: 70%;
+    }
+    .card-images>div >div:nth-child(2){
+        font-size: 2vw;
+    }
 }
 
 

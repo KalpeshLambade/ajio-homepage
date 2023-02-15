@@ -103,6 +103,7 @@
 }
 .idea{
     width: 100%;
+    /* border: 1px solid red; */
 }
 .idea >div{
     width:100%;
@@ -486,6 +487,7 @@ footer >div:nth-child(1){
 }
 #topware-bar >div:nth-child(3) input{
     width:60%;
+    /* border:1px solid tomato; */
 }
 .card-images{
     width:100%;
@@ -512,6 +514,7 @@ footer >div:nth-child(1){
 .card-images>div >div:nth-child(2){
     text-align: center;
     margin-top: 10px;
+     /* border:1px solid blue; */
 }
 
 /* ????//////// end ///////??? */
