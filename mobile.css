@@ -1,0 +1,43 @@
+@media screen and (max-width:500px){
+    #nav >div{
+        width:100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #nav-right-top{
+        display:none;
+    }
+    #nav-right-bot-left{
+        display:none;
+    }
+    #nav-right-bot{
+        /* width:100%; */
+        
+    }
+    #nav-right-bot >div{
+        width:100%;
+    }
+    #nav-left{
+        height:40%;
+        width:50%;
+    }
+    #nav-right{
+        height:60%;
+        width:100%;
+        padding-top: 15px;
+    }
+    #nav{
+        height:80px;
+    }
+    #nav-right >div{
+        height: 100%;
+    }
+    #nav-right-bot-right >div{
+        height: 50%;
+        width:5%;
+    }
+}
+
+
+
