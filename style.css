@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding:0;
+    box-sizing:border-box;
 }
 #top-section{
     height:100px;
@@ -517,11 +518,111 @@ footer >div:nth-child(1){
      /* border:1px solid blue; */
 }
 
-/* ????//////// shirt ///////??? */
-#main{
+/* ????//////// Resitration ///////??? */
+#sign-in{
+    height: 100vh;
+    /* border:1px solid red ; */
+}
+#sign-in >div:nth-child(1){
+    height: 80%;
+    width:25%;
+    margin: 5% auto;
+    /* border:1px solid blue; */
     
 }
-.display-shirt{
-border:1px solid red;
-height:500px;
+#sign-in-top{
+    height: 25%;
+    margin: auto;
+    /* border:1px solid blue;  */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#sign-in-top >h2{
+    /* border:1px solid red ; */
+    width:100%;
+    height:30%;
+    font-size: 2vw;
+    font-weight: 500;
+} 
+#sign-in-top >p{
+    /* border:1px solid red ; */
+    width:100%;
+    height:20%;
+    font-size:1.3vw;
+} 
+#sign-in-top >div:nth-child(3), #sign-in-top >div:nth-child(4){
+    border:2px solid red ;
+    width:40%;
+    height:25%;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+#sign-in-top >div:nth-child(3){
+    border:2px solid blue ;
+}
+#sign-in-top >div:nth-child(3)>p, #sign-in-top >div:nth-child(4)>p{
+    font-size:1.3vw;
+}
+#sign-in-top >div:nth-child(3)>div>img, #sign-in-top >div:nth-child(4)>div>img{
+    max-height:100%;
+    max-width:100%;
+}
+#sign-in-bot legend{
+    font-size:1.2vw;
+    color:grey;
+    text-align:center;
+}
+#sign-in-bot{
+    height: 70%;
+    /* border:1px solid red ; */
+}
+#sign-in-bot fieldset{
+    border:none;
+    border-top:1px solid grey;  
+}
+#sign-in-bot >div:nth-child(1){
+    height:5%;
+    width:80%;
+    margin:2% auto;
+}
+#sign-in-bot >div:nth-child(2){
+    height:95%;
+    /* border:1px solid blue ; */
+}
+#sign-in-bot >div >form {
+    /* border:1px solid black ; */
+    height:100%;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+}
+#sign-in-bot >div >form >label{
+    height:2%;
+    font-size: 1.2vw;
+    padding: 0 2%;
+}
+#sign-in-bot >div >form >input{
+    height:8%;
+    width:100%;
+    font-size:0.9vw;
+    border:none;
+    border-bottom:1px solid grey;
+    outline:none;
+    padding: 0 3%;  
+    color:#5d5858;
+    border-radius: 2px;
+    caret-color: red;
+}
+#sign-in-bot >div >form >input:nth-child(11){
+    background-color:#d5a249;
+    color:white;
+}
+#sign-in-bot >div >form >label:nth-child(12){
+    font-size:0.7vw;
+}
+#sign-in-bot >div >form >label:nth-child(12) >span{
+    color:blue;
 }
