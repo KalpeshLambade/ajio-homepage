@@ -52,3 +52,8 @@ function register(event) {
     alert("registration done");
   }
 }
+
+function login(event){
+  event.preventDefault();
+  alert("working");
+}
