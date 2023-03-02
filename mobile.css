@@ -129,13 +129,13 @@
     #sign-in-bot >div:nth-child(1){
         width:90%;
     }
-    #sign-in-bot >div >form >label{
+    #sign-in-bot >div >form >label,.form-label{
         font-size:4vw;
     }
-    #sign-in-bot >div >form >input{
+    #sign-in-bot >div >form >input,.form-input{
         font-size:3vw;
     }
-    #sign-in-bot >div >form >label:nth-child(12){
+    #sign-in-bot >div >form >label:nth-child(12),.form-submit{
         font-size:2vw;
     }
 }
