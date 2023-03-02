@@ -62,20 +62,16 @@ function login(event) {
       dataFromLS[i].password === userPassword
     ) {
       flag = true;
-    } else {
-      document.getElementById("email").value = "";
-      document.getElementById("password").value = "";
     }
   }
 
   if (flag) {
     document.getElementById("email").value = "";
     document.getElementById("password").value = "";
-    window.location.href ="/index.html";
+    window.location.href = "/index.html";
     alert("Loged in Sucessful");
-  }
-  else{
-    alert("Please check password or email again")
+  } else {
+    alert("Please check password or email again");
     document.getElementById("email").value = "";
     document.getElementById("password").value = "";
   }
