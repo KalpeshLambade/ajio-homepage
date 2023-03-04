@@ -47,34 +47,9 @@
             </fieldset>
           </div>
 
-          <div>
-            <form onsubmit="login(event)">
-              
-              <label class="form-label">Enter Email</label>
-              <input
-                type="email"
-                id="email"
-                class="form-input"
-                placeholder="Enter Mail Id"
-                required
-              />
-              <label class="form-label">Enter User Password</label>
-              <input
-                type="password"
-                id="password"
-                class="form-input"
-                placeholder="Enter password"
-                required
-              />
-
-              <input type="submit" class="form-input form-submit" value="Sign Up" />
-              <label class="form-bottom-text"
-                >By Signing In, I agree to Terms and Conditions.<span
-                  >Terms and Conditions.</span
-                ></label
-              >
-            </form>
-            <a href="/reset.html">Forget Password</a>
+          <div id="change" class="form-label">
+            <input type="email" id="email" placeholder="Email" class="form-input"/>
+            <button onclick="forgotPassword(event)" class="form-input form-submit">submit Email</button>
           </div>
         </div>
       </div>
