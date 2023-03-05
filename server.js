@@ -131,8 +131,10 @@ function add(event) {
 
   var dataFromLS = JSON.parse(localStorage.getItem("product")) || [];
 
+  dataFromLS.push(product);
   localStorage.setItem("product", JSON.stringify(dataFromLS));
-  document.getElementById("name").value = "";
-  document.getElementById("image").value = "";
-  document.getElementById("price").value = "";
+  document.getElementById("name").value ="";
+  document.getElementById("image").value ="";
+  document.getElementById("price").value="";
+  
 }

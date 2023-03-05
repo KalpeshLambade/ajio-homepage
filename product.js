@@ -16,7 +16,7 @@ window.onload=function(){
         </div>
         <div>
           <p>${dataFromLs[i].name}</p>
-          <p>${dataFromLs[i].price}</p>
+          <p>₹${dataFromLs[i].price}</p>
         </div>
       </div>`;
     }
