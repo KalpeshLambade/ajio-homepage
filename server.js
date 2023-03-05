@@ -124,3 +124,18 @@ function newPassword(i){
     alert("Password Changed , Now Login");
 
 }
+function add(event){
+  event.preventDefault();
+
+  var productName = document.getElementById("name").value;
+  var productImage =document.getElementById("image").value;
+  var productPrice =document.getElementById("price").value;
+
+  var product ={name:productName, image:productImage, price:productPrice};
+
+  var dataFromLS =JSON.parse(localStorage.getItem("product")) || [];
+
+  dataFromLS.push(product);
+  localStorage.setItem("product",JSON.stringify(dataFromLS));
+
+}
