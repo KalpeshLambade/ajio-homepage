@@ -26,9 +26,8 @@ window.onload=function(){
 };
 
 function addTocart(pro){
-  alert("working");
-  console.log(pro);
-  var product =JSON.stringify(pro);
+  var product = JSON.parse(pro);
   console.log(product);
+  // Add your code logic here
 }
 
