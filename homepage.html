@@ -700,12 +700,21 @@
     </footer>
     <script src="/server.js"></script>
     <script>
-      var divFromHtml = document.getElementById("logincredit");
-      var dataFromLs = JSON.parse(localStorage.getItem("currentUser"));
+      function check() {
+        var divFromHtml = document.getElementById("logincredit");
+        var dataFromLs = JSON.parse(localStorage.getItem("currentUser"));
 
-      if (dataFromLs.currentUserEmail) {
-        var newCode = `<div class="log-out"><button onclick="logout()">Log out</button></div>`;
-        divFromHtml.innerHTML = newCode;
+        if (dataFromLs.currentUserEmail) {
+          var newCode = `<div class="log-out"><button onclick="logout()">Log out</button></div>`;
+          divFromHtml.innerHTML = newCode;
+        }
+      }
+      check();
+
+      function logout() {
+        localStorage.removeItem("currentUser");
+        window.location.reload();
+        alert("Loged out");
       }
     </script>
   </body>

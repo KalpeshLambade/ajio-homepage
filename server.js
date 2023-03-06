@@ -146,10 +146,4 @@ function add(event) {
   
 }
 
-function logout(){
-  dataFromLS =JSON.parse(localStorage.getItem("currentUser"));
 
-  localStorage.removeItem("currentUser");
-  alert("Log out");
-  window.location.href ="/login.html";
-}
