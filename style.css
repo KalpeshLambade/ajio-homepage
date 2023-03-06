@@ -254,6 +254,11 @@ footer >div:nth-child(1){
     background-color:black;
     color:white;
 }
+#nav-right-top >div:nth-child(2) >div:nth-child(1){
+    width:25%;
+    height:80%;
+    /* border:1px solid orangered;  */
+}
 #nav-right-top >div:nth-child(2) >div:nth-child(3) p{
     margin-top:10px;
 }
@@ -632,4 +637,16 @@ footer >div:nth-child(1){
 }
 .form-bottom-text>span{
     color:blue;
+}
+.log-out >button{
+    color:white;
+    width:80%;
+    height: 25px;
+    margin: 5% 8%;
+    background-color: rgb(114, 114, 122);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1.15vw;
 }

@@ -68,8 +68,15 @@ function login(event) {
   if (flag) {
     document.getElementById("email").value = "";
     document.getElementById("password").value = "";
-    window.location.href = "/index.html";
+
+    var user={};
+    user.currentUserEmail = userEmail;
+    localStorage.setItem("currentUser",JSON.stringify(user));
+
+
+    window.location.href = "/homepage.html";
     alert("Loged in Sucessful");
+
   } else {
     alert("Please check password or email again");
     document.getElementById("email").value = "";
@@ -137,4 +144,12 @@ function add(event) {
   document.getElementById("image").value ="";
   document.getElementById("price").value="";
   
+}
+
+function logout(){
+  dataFromLS =JSON.parse(localStorage.getItem("currentUser"));
+
+  localStorage.removeItem("currentUser");
+  alert("Log out");
+  window.location.href ="/login.html";
 }

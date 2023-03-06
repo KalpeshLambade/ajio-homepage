@@ -18,7 +18,9 @@
       <div>
         <div id="sign-in-top">
           <h2>Welcome to AJIO</h2>
-          <p onclick="window.location.href='/login.html'"> Click to Log in or use</p>
+          <p onclick="window.location.href='/login.html'">
+            Click to Log in or use
+          </p>
           <div>
             <div>
               <img
@@ -51,7 +53,7 @@
               <input
                 type="text"
                 id="name"
-                class ="form-input"
+                class="form-input"
                 placeholder="Enter User Name"
                 required
               />
@@ -59,7 +61,7 @@
               <input
                 type="number"
                 id="number"
-                class ="form-input"
+                class="form-input"
                 placeholder="+91 |   Mobile Number "
                 required
               />
@@ -67,7 +69,7 @@
               <input
                 type="email"
                 id="email"
-                class ="form-input"
+                class="form-input"
                 placeholder="Enter Mail Id"
                 required
               />
@@ -75,7 +77,7 @@
               <input
                 type="password"
                 id="password"
-                class ="form-input"
+                class="form-input"
                 placeholder="Enter password"
                 required
               />
@@ -83,11 +85,15 @@
               <input
                 type="password"
                 id="conform-password"
-                class ="form-input"
+                class="form-input"
                 placeholder=" Conform password"
                 required
               />
-              <input type="submit" class ="form-input form-submit" value="Sign Up" />
+              <input
+                type="submit"
+                class="form-input form-submit"
+                value="Sign Up"
+              />
               <label class="form-bottom-text"
                 >By Signing In, I agree to Terms and Conditions.<span
                   >Terms and Conditions.</span
@@ -99,5 +105,13 @@
       </div>
     </div>
     <script src="/server.js"></script>
+    <script>
+      var dataFromLs = JSON.parse(localStorage.getItem("currentUser"));
+
+      if (dataFromLs) {
+        alert("Your are already Loged in");
+        window.location.href = "/homepage.html";
+      }
+    </script>
   </body>
 </html>

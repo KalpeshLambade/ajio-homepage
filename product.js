@@ -17,10 +17,18 @@ window.onload=function(){
         <div>
           <p>${dataFromLs[i].name}</p>
           <p>₹${dataFromLs[i].price}</p>
+          <button onclick="addTocart(${JSON.stringify(dataFromLs[i])})">Add to Cart</button>
         </div>
       </div>`;
     }
     divFromHtml.innerHTML = stored;
 
+};
+
+function addTocart(pro){
+  alert("working");
+  console.log(pro);
+  var product =JSON.stringify(pro);
+  console.log(product);
 }
 
