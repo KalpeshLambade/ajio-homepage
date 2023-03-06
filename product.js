@@ -17,9 +17,11 @@ window.onload=function(){
         <div>
           <p>${dataFromLs[i].name}</p>
           <p>₹${dataFromLs[i].price}</p>
-          <button onclick="addTocart(${JSON.stringify(dataFromLs[i])})">Add to Cart</button>
+          <button onclick="addTocart('${JSON.stringify(dataFromLs[i])}')">Add to Cart</button>
         </div>
       </div>`;
+      console.log(JSON.stringify(dataFromLs[i]));
+
     }
     divFromHtml.innerHTML = stored;
 
