@@ -14,58 +14,164 @@
     ></script>
   </head>
   <body>
-    <div id="top-section">
-      <div id="nav">
-        <div>
-          <div id="nav-left">
-            <img
-              src="https://assets.ajio.com/static/img/Ajio-Logo.svg"
-              alt="ajio"
-            />
-          </div>
-          <div id="nav-right">
-            <div id="nav-right-top">
-              <div></div>
-              <div>
-                <div id="logincredit">
-                  <p><a href="/Registration.html">Sign In / Join AJIO</a></p>
-                </div>
-                <div><p>Customer Care</p></div>
-                <div><p>Visit AJIOLUXE</p></div>
+    <div id="nav">
+      <div>
+        <div id="nav-left">
+          <img
+            src="https://assets.ajio.com/static/img/Ajio-Logo.svg"
+            alt="ajio"
+          />
+        </div>
+        <div id="nav-right">
+          <div id="nav-right-top">
+            <div></div>
+            <div>
+              <div id="logincredit">
+                <p></p>
               </div>
-            </div>
-            <div id="nav-right-bot">
-              <div id="nav-right-bot-left">
-                <a href="/index.html"><div>MEN</div></a>
-                <div>WOMEN</div>
-                <div>KIDS</div>
-                <div>INDIE</div>
-                <div>HOME AND KITCHEN</div>
-              </div>
-              <div id="nav-right-bot-right">
-                <div>
-                  <input type="text" placeholder="Search AJIO" />
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <div>
-                  <i class="fa-regular fa-heart"></i>
-                </div>
-                <div>
-                  <i class="fa-solid fa-bag-shopping"></i>
-                </div>
-              </div>
+              <div><p>Customer Care</p></div>
+              <div><p>Visit AJIOLUXE</p></div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <script>
-      var dataFromLs = JSON.parse(localStorage.getItem("currentUser"));
+    <div id="cart">
+      <span>
+        <p>Your Shopping Bag is Empty!!</p>
+        <p>
+          Sign in to link items to your account, or view items already in your
+          account
+        </p>
+        <button onclick="window.location.href='/login.html'">
+          click to continue
+        </button>
+      </span>
+    </div>
 
-      if (!dataFromLs) {
-        window.location.href = "/login.html";
-        alert("Please login to add cart");
+    <div id="logo">
+      <div>
+        <i class="fa-solid fa-bag-shopping"></i>
+        <p>EASY EXCHANGE</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-hand-holding-medical"></i>
+        <p>100% HANDPICK</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-square-check"></i>
+        <p>ASSURED QUALITY</p>
+      </div>
+    </div>
+
+    <footer>
+      <div>
+        <div id="footer-top">
+          <div>
+            <div>Ajio</div>
+            <div>
+              <p>who we are</p>
+              <p>Join Our Team</p>
+              <p>terms and conditions</p>
+              <p>We rspect your privacy</p>
+              <p>Fees & payments</p>
+              <p>Returns & Refunds Policy</p>
+              <p>Promotions Terms & conditions</p>
+            </div>
+          </div>
+          <div>
+            <div>Help</div>
+            <div>
+              <p>Track your orders</p>
+              <p>Frequently Asked Questions</p>
+              <p>Returns</p>
+              <p>Cancellations</p>
+              <p>Payments</p>
+              <p>Customer care</p>
+              <p>How to I redeem my coupon</p>
+            </div>
+          </div>
+          <div>
+            <div>Shope by</div>
+            <div>
+              <p>Men</p>
+              <p>Women</p>
+              <p>Kids</p>
+              <p>Indie</p>
+              <p>Store</p>
+              <p>New arrivals</p>
+              <p>Brand directory</p>
+              <p>Home</p>
+              <p>Collections</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer-bot">
+        <img src="/Screenshot 2023-02-11 142921.png" alt="footer" />
+      </div>
+    </footer>
+    <script>
+      window.onload = function () {
+        var dataFromLs = JSON.parse(localStorage.getItem("currentUser"));
+
+        if (!dataFromLs) {
+          // window.location.href = "/login.html";
+          alert("Please login to add cart");
+        } else {
+          var dataFromLs = JSON.parse(localStorage.getItem("userData"));
+          var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+          var divFromHtml = document.getElementById("cart");
+          var display = [];
+          var cartProducts;
+          var flag = false;
+
+          for (var i = 0; i < dataFromLs.length; i++) {
+            if (
+              dataFromLs[i].email === currentUser["currentUserEmail"] &&
+              dataFromLs[i].cartProducts.length > 0
+            ) {
+              cartProducts = dataFromLs[i].cartProducts;
+              flag = true;
+            }
+          }
+          console.log(flag, "flag");
+          if (flag === false) {
+            window.location.href = "index.html";
+            alert("Your cart is empty");
+          } else {
+            for (var i = 0; i < cartProducts.length; i++) {
+              display += `<div><div><img src="${cartProducts[i].image}"></div><div><p>${cartProducts[i].name}</p><p>${cartProducts[i].price}</p></div></div>`;
+            }
+          }
+          display += `<button onclick='buy()'>Click to Buy</button>`;
+
+          divFromHtml.innerHTML = display;
+        }
+      };
+
+      function buy() {
+        var dataFromLs = JSON.parse(localStorage.getItem("userData"));
+        var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+        var updateUser = [];
+
+        for (var i = 0; i < dataFromLs.length; i++) {
+          if (
+            dataFromLs[i].email === currentUser["currentUserEmail"] &&
+            dataFromLs[i].cartProducts
+          ) {
+            dataFromLs[i].cartProducts = [];
+            updateUser.push(dataFromLs[i]);
+          } else {
+            updateUser.push(dataFromLs[i]);
+          }
+        }
+
+        localStorage.setItem("userData", JSON.stringify(updateUser));
+        window.location.href = "index.html";
+        alert("product will be dilevered soon");
       }
     </script>
   </body>
