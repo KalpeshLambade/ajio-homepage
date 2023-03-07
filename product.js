@@ -27,7 +27,6 @@ window.onload = function () {
 };
 
 function addTocart(pro) {
-  alert("worked");
     var product =JSON.stringify(pro);
     var dataFromLs =JSON.parse(localStorage.getItem("userData"));
     var currentUser =JSON.parse(localStorage.getItem("currentUser"));
