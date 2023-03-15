@@ -143,7 +143,7 @@
             alert("Your cart is empty");
           } else {
             for (var i = 0; i < cartProducts.length; i++) {
-              display += `<div><div><img src="${cartProducts[i].image}"></div><div><p>${cartProducts[i].name}</p><p>${cartProducts[i].price}</p></div></div>`;
+              display += `<div><div><img src="${cartProducts[i].image}"></div><div><p>${cartProducts[i].name}</p><p>₹${cartProducts[i].price}</p></div></div>`;
             }
           }
           display += `<button onclick='buy()'>Click to Buy</button>`;

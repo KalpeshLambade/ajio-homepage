@@ -523,6 +523,20 @@ footer >div:nth-child(1){
     text-align: center;
     margin-top: 10px;
      /* border:1px solid blue; */
+     
+}
+#card-images>div >div:nth-child(2) >p{
+    /* border:1px solid red ;  */
+    font-size:1.3vw;
+}
+#card-images>div >div:nth-child(2) >button{
+    /* border:1px solid red ;  */
+    border:none;
+    outline:none;
+    background-color:#e8f8ff;
+    color:blue;
+    cursor:pointer;
+    width:100%;
 }
 
 /* ????//////// Resitration ///////??? */
@@ -716,4 +730,8 @@ footer >div:nth-child(1){
     border-radius:5px;
     cursor:pointer;
     border:none;
+}
+/* Cursor */
+.cursor{
+    cursor: pointer;
 }

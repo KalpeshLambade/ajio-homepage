@@ -16,7 +16,7 @@ window.onload = function () {
         </div>
         <div>
           <p>${dataFromLs[i].name}</p>
-          <p>₹${dataFromLs[i].price}</p>
+          <p><strong>₹${dataFromLs[i].price}</strong></p>
           <button onclick='addTocart(${JSON.stringify(
             dataFromLs[i]
           )})'>Add to Cart</button>
